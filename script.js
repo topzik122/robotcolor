@@ -60,3 +60,19 @@ const users = [
         "email": "Rey.Padberg@karina.biz",
     }
 ]
+
+// Пример вставки робота в контейнер
+
+const cards = document.querySelector(".cards")
+
+cards.insertAdjacentHTML('beforeend', 
+    `
+        <li class="card">
+            <img class="card__avatar" src="https://robohash.org/${users[0].id}?size=300x300" />
+            <div class="card__description">
+                <h3 class="card__name">${users[0].name}</h3>
+                <p class="card__email">${users[0].email}</p>
+            </div>
+        </li>
+    `
+)
